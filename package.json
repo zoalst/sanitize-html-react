@@ -1,0 +1,38 @@
+{
+  "name": "sanitize-html-react",
+  "version": "1.13.0",
+  "description": "Modified sanitize-html for React. Clean up user-submitted HTML, preserving whitelisted elements and whitelisted attributes on a per-element basis",
+  "main": "index.js",
+  "scripts": {
+    "build": "browserify index.js > dist/sanitize-html-react.js --standalone 'sanitizeHtml'",
+    "minify": "npm run build && uglifyjs dist/sanitize-html-react.js > dist/sanitize-html-react.min.js",
+    "test": "mocha test/test.js",
+    "prebuild": "npm run test && rm -rf dist && mkdir dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/zacharystenger/sanitize-html-react.git"
+  },
+  "keywords": [
+    "html",
+    "parser",
+    "sanitizer",
+    "html",
+    "sanitizer",
+    "apostrophe",
+    "react",
+    "jsx"
+  ],
+  "author": "P'unk Avenue LLC, Zachary Stenger <zackstenger@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "htmlparser2": "^3.9.0",
+    "regexp-quote": "0.0.0",
+    "xtend": "^4.0.0"
+  },
+  "devDependencies": {
+    "browserify": "^13.0.1",
+    "mocha": "^2.5.3",
+    "uglify-js": "^2.6.2"
+  }
+}
